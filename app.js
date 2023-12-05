@@ -11,7 +11,8 @@ import "dotenv/config"; // use different front end URL in dev and in production
 
 import mongoose from "mongoose";
 mongoose.connect(
-  "mongodb+srv://root:7Xnb105.com@kanbas-server.phlgzud.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://root:7Xnb105.com@kanbas-server.phlgzud.mongodb.net/kanbas?retryWrites=true&w=majority/"
+  //"mongodb+srv://qixinnnn:Rr248857409@cluster0.t5ixism.mongodb.net/kanbas?retryWrites=true&w=majority/"
 ); //connect to the database
 
 //mongoose.connect("mongodb://127.0.0.1:27017/kanbas"); //connect to local database
@@ -25,6 +26,7 @@ app.use(
       "https://656eb9b40662f6000833854e--radiant-dango-332097.netlify.app/",
   })
 ); //use cors
+
 const sessionOptions = {
   secret: "any string",
   resave: false,
