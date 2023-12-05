@@ -21,7 +21,8 @@ const app = express(); //create an express intance
 app.use(
   cors({
     credentials: true,
-    origin: 'https://656e9fd2367e88000842f19b--radiant-dango-332097.netlify.app',
+    origin:
+      "https://656eb9b40662f6000833854e--radiant-dango-332097.netlify.app/",
   })
 ); //use cors
 const sessionOptions = {
