@@ -10,14 +10,18 @@ import UserRoutes from "./users/routes.js";
 import "dotenv/config"; // use different front end URL in dev and in production
 
 import mongoose from "mongoose";
-mongoose.connect("mongodb://127.0.0.1:27017/kanbas"); //connect to the database
+mongoose.connect(
+  "mongodb+srv://root:7Xnb105.com@kanbas-server.phlgzud.mongodb.net/?retryWrites=true&w=majority"
+); //connect to the database
+
+//mongoose.connect("mongodb://127.0.0.1:27017/kanbas"); //connect to local database
 
 const app = express(); //create an express intance
 
 app.use(
   cors({
     credentials: true,
-    origin: process.env.FRONTEND_URL,
+    origin: 'https://656e9fd2367e88000842f19b--radiant-dango-332097.netlify.app',
   })
 ); //use cors
 const sessionOptions = {
